@@ -28,7 +28,6 @@ The SQL statement is written in the configuration file in the form of macro defi
 * Create tables
 
 ```
-
 #define     SQL_CREATE_TASK              @"CREATE TABLE IF NOT EXISTS FMDB_TASK(\
                                            TASK_ID integer PRIMARY KEY AUTOINCREMENT NOT NULL,\
                                            ROOM_ID int(11) NOT NULL DEFAULT 0,\
@@ -49,8 +48,7 @@ The SQL statement is written in the configuration file in the form of macro defi
                                            CATEGORY_TYPE int(4) NOT NULL,\
                                            CATEGORY_STATUS int(11) NOT NULL,\
                                            CATEGORY_REMARK nvarchar(100)\
-                                           );"
-                                           
+                                           );"                                           
 ```
 
 * Insert
@@ -77,7 +75,6 @@ The SQL statement is written in the configuration file in the form of macro defi
                                            CATEGORY_RANK, CATEGORY_TYPE, CATEGORY_STATUS, CATEGORY_REMARK)\
                                            VALUES (\
                                            :prantID, :level, :categoryName, :categoryImage, :categoryRank, :categoryType, :categoryStatus, :categoryRemark);"
-
 ```
 
 * Update
@@ -91,8 +88,7 @@ The SQL statement is written in the configuration file in the form of macro defi
 #define     SQL_UPDATE_CATEGORY          @"UPDATE FMDB_CATEGORY\
                                            SET PARENT_ID = '%d', LEVEL = '%d', CATEGORY_NAME = '%@',\
                                            CATEGORY_IMG = '%d',CATEGORY_RANK = '%d', CATEGORY_TYPE = '%d',\
-                                           CATEGORY_STATUS = '%d',CATEGORY_REMARK = '%@'\
-                                           WHERE CATEGORY_ID = '%d';"
+                                           CATEGORY_STATUS = '%d',CATEGORY_REMARK = '%@'\                                           WHERE CATEGORY_ID = '%d';"
 ```
 
 
@@ -102,7 +98,6 @@ The SQL statement is written in the configuration file in the form of macro defi
 #define     SQL_DELETE                   @"DELETE FROM %@ WHERE '%@'='%d';"
 
 #define     SQL_DELETE_ALL               @"DELETE FROM %@"
-
 ```
 
 * Select
@@ -112,7 +107,6 @@ The SQL statement is written in the configuration file in the form of macro defi
 #define     SQL_SELECT_ALL               @"SELECT * FROM %@;"
 
 #define     SQL_SELECT_PARAMTER          @"SELECT * FROM %@ WHERE %@ = '%d';"
-
 ```
 
 
