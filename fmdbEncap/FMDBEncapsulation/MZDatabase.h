@@ -54,7 +54,7 @@
                                            ( ROOM_ID, TASK_INFO, TASK_NUMBER,\
                                            TASK_STATUS, TASK_COORDINATE, TASK_BEDSIDE)\
                                            VALUES (\
-                                           :roomID, :residentsID, :TASKNumber, :TASKStatus, :TASKCoordinate, :TASKBeside);"
+                                           :roomID, :taskInfo, :taskNumber, :taskStatus, :taskCoordinate, :taskBeside);"
 
 #define     SQL_INSERT_CATEGORY_PARAMTER @"INSERT INTO FMDB_CATEGORY\
                                            ( PARENT_ID, LEVEL, CATEGORY_NAME, CATEGORY_IMG,\

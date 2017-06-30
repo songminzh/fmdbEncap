@@ -38,6 +38,7 @@
         }
     }
     NSString *dbFullPath = [path stringByAppendingString:@"common.sqlite3"];
+    NSLog(@"%@",dbFullPath);
     return dbFullPath;
 }
 
