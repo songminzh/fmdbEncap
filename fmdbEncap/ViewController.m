@@ -84,7 +84,7 @@
     // select
     NSString *SQL_SelectCategoryData = [NSString stringWithFormat:SQL_SELECT_ALL,TABLE_TASK];
     NSMutableArray *selectedTasks = [NSMutableArray array];
-      // select *
+    // select *
     [self.sqliteDao excuteQuerySQL:SQL_SelectCategoryData resultBlock:^(FMResultSet *rsSet) {
         while ([rsSet next]) {
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -99,7 +99,7 @@
         }
     }];
     NSLog(@"selected all tasks:%@",selectedTasks);
-      // select by ID
+    // select by ID
     NSString *SQL_SelectByID = [NSString stringWithFormat:SQL_SELECT_PARAMTER,TABLE_CATEGORY,@"CATEGORY_ID",6];
     [self.sqliteDao excuteQuerySQL:SQL_SelectByID resultBlock:^(FMResultSet *rsSet) {
         while ([rsSet next]) {
