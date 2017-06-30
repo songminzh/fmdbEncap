@@ -1,21 +1,26 @@
 # fmdbEncap
----------
+
 
 ## Motivation
----------
+
 FMDB is a powerful tool for iOS processing data persistence，but still no easy to use. Therefore, it is necessary to encapsulate it and make it easier to use.These encapsulate vary from person to person, and should be optimized according to our code habits.So, I would like to provide a reference.
 
 
 ## What is fmdbEncap
----------
+
 Use MZDatabaseManager to create SQLite database under the support of FMDB and create mothod in MZSqliteDao to do operations of insert,update,delete and select.
 
 
 ## How to use
----------
+
 You should add `FMDB` frist,then add the folder of FMDBEncapsulation and Model in you project.
 
-## SQL
+## Declaration
+
+In order to make it simple and practical, a database containing two tables named `FMDB_TASK` and `FMDB_CATEGORY` is built under documents of app.The arguments in the table also exist only for convenience.All operations on the database are also based on simulated data.I'll try to cover all the details of using FMDB，and continue to focus on the development and update of data persistence.
+
+## SQL statement
+
 The SQL statement is written in the configuration file in the form of macro definitions.
 
 * Table Name
