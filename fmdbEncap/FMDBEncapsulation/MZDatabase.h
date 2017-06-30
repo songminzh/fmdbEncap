@@ -43,12 +43,12 @@
 #define     SQL_INSERT_TASK              @"INSERT INTO FMDB_TASK\
                                            ( ROOM_ID, TASK_INFO, TASK_NUMBER,\
                                            TASK_STATUS, TASK_COORDINATE, TASK_BEDSIDE)\
-                                           VALUES ( '%ld', '%ld', '%ld', '%ld', '%@', '%@');"
+                                           VALUES ( '%d', '%d', '%d', '%d', '%@', '%@');"
 
 #define     SQL_INSERT_CATEGORY          @"INSERT INTO FMDB_CATEGORY\
                                            ( PARENT_ID, LEVEL, CATEGORY_NAME, CATEGORY_IMG,\
                                            CATEGORY_RANK, CATEGORY_TYPE, CATEGORY_STATUS, CATEGORY_REMARK)\
-                                           VALUES ( '%ld', '%ld', '%@', '%ld', '%ld', '%ld', '%ld', '%@');"
+                                           VALUES ( '%d', '%d', '%@', '%d', '%d', '%d', '%d', '%@');"
 
 #define     SQL_INSERT_TASK_PARAMTER     @"INSERT INTO FMDB_TASK\
                                            ( ROOM_ID, TASK_INFO, TASK_NUMBER,\
@@ -65,25 +65,27 @@
 /** Update */
 
 #define     SQL_UPDATE_TASK              @"UPDATE FMDB_TASK\
-                                           SEL ROOM_ID = '%ld', TASK_INFO = '%ld', TASK_NUMBER = '%ld',\
-                                           TASK_STATUS = '%ld', TASK_COORDINATE = '%@', TASK_BEDSIDE = '%@'\
-                                           WHERE TASK_ID = '%ld';"
+                                           SET ROOM_ID = '%d', TASK_INFO = '%d', TASK_NUMBER = '%d',\
+                                           TASK_STATUS = '%d', TASK_COORDINATE = '%@', TASK_BEDSIDE = '%@'\
+                                           WHERE TASK_ID = '%d';"
 
 #define     SQL_UPDATE_CATEGORY          @"UPDATE FMDB_CATEGORY\
-                                           SEL PARENT_ID = '%ld', LEVEL = '%ld', CATEGORY_NAME = '%@',\
-                                           CATEGORY_IMG = '%ld',CATEGORY_RANK = '%ld', CATEGORY_TYPE = '%ld',\
-                                           CATEGORY_STATUS = '%ld',CATEGORY_REMARK = '%@'\
-                                           WHERE CATEGORY_ID = '%ld';"
+                                           SET PARENT_ID = '%d', LEVEL = '%d', CATEGORY_NAME = '%@',\
+                                           CATEGORY_IMG = '%d',CATEGORY_RANK = '%d', CATEGORY_TYPE = '%d',\
+                                           CATEGORY_STATUS = '%d',CATEGORY_REMARK = '%@'\
+                                           WHERE CATEGORY_ID = '%d';"
 
 
 /** Delete */
 
-#define     SQL_DELETE                   @"DELETE FROM %@ WHERE '%@'='%ld';"
+#define     SQL_DELETE                   @"DELETE FROM %@ WHERE '%@'='%d';"
+
+#define     SQL_DELETE_ALL               @"DELETE FROM %@"
 
 /** Select */
 
 #define     SQL_SELECT_ALL               @"SELECT * FROM %@;"
 
-#define     SQL_SELECT_PARAMTER          @"SELECT * FROM %@ WHERE %@ = '%ld';"
+#define     SQL_SELECT_PARAMTER          @"SELECT * FROM %@ WHERE %@ = '%d';"
 
 #endif /* MZDatabase_h */
