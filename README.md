@@ -3,7 +3,7 @@
 
 ## Motivation
 
-FMDB is a powerful tool for iOS processing data persistence，but still no easy to use. Therefore, it is necessary to encapsulate it and make it easier to use.These encapsulate vary from person to person, and should be optimized according to our code habits.So, I would like to provide a reference.
+FMDB is a powerful tool for data processing persistence in iOS,and it can help developers efficiently process data in our iOS projects.But it's not very easy to use for  junior developers. Therefore, it is necessary to encapsulate it and make it easier to use.These encapsulate vary from person to person, and should be optimized according to our code habits.So, I would like to provide a reference with this project.
 
 
 ## What is fmdbEncap
